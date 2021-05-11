@@ -7,7 +7,7 @@ on:
 
 jobs:
   publish:
-    name: build, test, publish
+    name: publish
     env:
       NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
     runs-on: ubuntu-latest
@@ -33,9 +33,6 @@ jobs:
 
       - name: yarn install
         run: yarn install --prefer-offline --frozen-lockfile --no-progress --non-interactive
-
-      - name: Build
-        run: yarn build
 
       - name: Get Outputs
         id: vars
