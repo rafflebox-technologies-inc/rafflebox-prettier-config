@@ -1,0 +1,12 @@
+{
+  "name": "rafflebox-prettier-config",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write \"**/*.{ts,js,json,md,yml}\"",
+    "format:check": "prettier --debug-check \"**/*.{ts,js,json,md,yml}\""
+  },
+  "devDependencies": {
+    "prettier": "~2.3.0"
+  }
+}
