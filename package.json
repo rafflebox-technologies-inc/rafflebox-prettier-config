@@ -1,7 +1,13 @@
 {
   "name": "rafflebox-prettier-config",
   "version": "1.0.0",
-  "main": "index.js",
+  "author": "Rafflebox Engineering",
+  "license": "UNLICENSED",
+  "homepage": "https://github.com/rafflebox-technologies-inc/rafflebox-prettier-config",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rafflebox-technologies-inc/rafflebox-prettier-config.git"
+  },
   "scripts": {
     "format": "prettier --write \"**/*.{ts,js,json,md,yml}\"",
     "format:check": "prettier --debug-check \"**/*.{ts,js,json,md,yml}\""
