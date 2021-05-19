@@ -1,6 +1,7 @@
 {
   "name": "rafflebox-prettier-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "description": "Rafflebox prettier configuration file",
   "author": "Rafflebox Engineering",
   "license": "UNLICENSED",
   "homepage": "https://github.com/rafflebox-technologies-inc/rafflebox-prettier-config",
@@ -12,7 +13,24 @@
     "format": "prettier --write \"**/*.{ts,js,json,md,yml}\"",
     "format:check": "prettier --debug-check \"**/*.{ts,js,json,md,yml}\""
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && yarn test"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,js}": [
+      "eslint --max-warnings 100",
+      "git add"
+    ],
+    "*.{ts,js,json,md,yml}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
   "devDependencies": {
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
     "prettier": "~2.3.0"
   }
 }
